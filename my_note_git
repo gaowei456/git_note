@@ -21,4 +21,7 @@
 	HEAD^^    表示上上版本
 	HEAD~100  表示往上100个版本
 
-
+8	工作区和暂存区
+	工作区			|    版本库
+	readme.txt      |	stage(暂存)	     master (HEAD指针指向master)
+	    git add->加到暂存     git commit->提交到分支
