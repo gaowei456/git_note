@@ -25,3 +25,9 @@
 	工作区			|    版本库
 	readme.txt      |	stage(暂存)	     master (HEAD指针指向master)
 	    git add->加到暂存     git commit->提交到分支
+
+9	第一次修改-> git add-> 第二次修改 -> git commit
+	第一次修改放入暂存区提交，第二次不会
+	可以：第一次修改-> git add -> 第二次修改 -> git add-> git commit 
+
+10	
