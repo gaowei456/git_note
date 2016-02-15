@@ -9,3 +9,5 @@
 	git commit 提交到仓库
 
 4	git status 查看仓库的当前状态
+
+5	git diff 查看different
