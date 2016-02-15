@@ -13,7 +13,8 @@
 5	git diff 查看different
 
 6	git log  查看最近到最远的提交日志
-	--pretty=oneline 显示commit id(版本号)
+	git reflog  列表显示   
+	--pretty=one	line 显示commit id(版本号)
 
 7	git reset --hard HEAD^ 回退到上一版
 	HEAD	  表示当前版本
@@ -37,4 +38,15 @@
 		git reset HEAD file 回到1了
 	3.commit了，使用 版本回退 前提没有推送到远程库
 
-11	
+11	删除文件
+	直接 rm .../ git rm ..
+	出现误删 git checkout -- file(test.txt)
+
+
+
+
+
+
+
+
+
