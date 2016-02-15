@@ -11,3 +11,14 @@
 4	git status 查看仓库的当前状态
 
 5	git diff 查看different
+
+6	git log  查看最近到最远的提交日志
+	--pretty=oneline 显示commit id(版本号)
+
+7	git reset --hard HEAD^ 回退到上一版
+	HEAD	  表示当前版本
+	HEAD^     表示上一版本
+	HEAD^^    表示上上版本
+	HEAD~100  表示往上100个版本
+
+
