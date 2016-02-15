@@ -1,0 +1,11 @@
+1	首先  创建一个目录 
+	mkdir learn_git
+	cd learngit
+
+2	通过git_init把这个目录变成git可以管理的仓库
+	git init
+
+3	git add    添加到仓库
+	git commit 提交到仓库
+
+4	git status 查看仓库的当前状态
