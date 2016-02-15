@@ -30,4 +30,11 @@
 	第一次修改放入暂存区提交，第二次不会
 	可以：第一次修改-> git add -> 第二次修改 -> git add-> git commit 
 
-10	
+10	撤销修改
+	1.在工作区 改乱了文件内容 直接丢弃
+		git checkout -- file(文件名) --必须有
+	2.添加到暂存区
+		git reset HEAD file 回到1了
+	3.commit了，使用 版本回退 前提没有推送到远程库
+
+11	
