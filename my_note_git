@@ -42,11 +42,19 @@
 	直接 rm .../ git rm ..
 	出现误删 git checkout -- file(test.txt)
 
-
-
-
-
-
-
-
-
+12	添加远程库
+	首先上GitHub注册
+	创建SSH Key   ssh-keygen -t rsa -C "gaowei121314@gmail.com"(注册的邮箱地址)
+	之后有 id_rsa(私钥，不能泄露)，id_rsa.pub(公钥，可以告诉别人)
+	登入GitHub，打开"Account settings","SSH Keys"页面，点击"Add SSH Key"，填上任意title
+	在key文本框里黏贴id_rsa.pub文件的内容
+	再到右上角找到"Create a new repo",创建一个新仓库
+	
+	$username --> 用户帐号
+	$reponame --> 仓库名称
+	然后在新开一个网页网址输入 https://github.com/$username/$reponame 登入到你的仓库
+	git remote add origin git@github.com:$username/$reponame.git  使本地库与之关联     
+	
+	git push -u origin master 把本地库的所有内容推送到远程库上
+	之后只要本地作了提交，就可以通过 git push origin master把本地
+	master分支的最新修改推送到GitHub。
