@@ -71,12 +71,76 @@
 	HEAD --> master --> 提交
 
 	git checkout -b dev 创建dev分支并切换到dev
-	相当于 git branch dev	创建dev分支
+	相当于 git branch dev [head hash]  基于某个head的哈希值创建dev分支,如果不指定则是基于当前的head
 		   git checkout dev 切换dev分支
 
 	git branch			查看当前分支（该命令会列出所有分支，当前分支前面会有个*）
 	git merge dev		把dev分支合并到master分支上
 	git branch -d dev   把当前dev分支删除
+	*当一个分支修改后，没有merge合并，是不能被删除，若要删git branch -D ...
+	*当一个分支删除后，可以通过 git reflog 查看记录commitID  git checkout $commitID 找回。
+
+
+ 15	解决冲突
+	2条分支master,feature1.
+	feature1分支上,修改readme.txt，add，commit提交
+	master分支也对readme.txt 修改 add commit提交
+	然后 git merge feature1,合并git会显示冲突。
+
+	cat readme.txt  会出现
+	<<<<<<HEAD
+	...................(master 修改的)
+	===========
+	...................(feature1 修改的)
+	>>>>>>>feature1
+
+	这时把 冲突项 修改解决，该语句修改，其余删除。
+	..................（冲突解决） add commit 提交。
+	git log --graph 来查看分支合并图
+
+16	分支管理策略
+	在实际的开发中：
+	master分支	应该是十分稳定，仅用来发布新版本，不能平时在上面干活
+	dev分支     干活都在dev分支，比如dev发布1.0版本后在合并到master分支
+	而我们每个人的分支就时不时的往dev分支上合并。
+
+	通常合并分支时 git会用Fast forward模式，这种模式删除分之后会丢掉分支信息
+	git merge --no-ff dev,	--no-ff 强制禁用Fast forward模式
+	同样的用 git log --graph查看
+
+17	Bug分支
+	当你还在dev分支上工作时，有bug要去解决
+	git stash 来保留你的工作现场
+	git stash list 查看全部保留的现场
+	git stash apply 恢复，但stash内容不删除，需要使用 git stash drop来删除
+	git stash pop 恢复的同时把stash的内容也删除了
+
+	修复bug的过程中
+	切换到bug的分支上，git branch issue-01 bug分支来解决bug，
+	解决后 commit提交，merge合并，最后删除issue-01
+
+18  Feature分支（添加新功能）
+	接到一个新功能，git checkout -b new_func
+	开始开发。。。。。。开发结束
+	git checkout dev 切回dev merge合并 git branch -d new_func
+	若各种原因放弃 切回dev git branch -D new_func删除
+
+19	多人协作
+	git remote 查看远程库信息  
+	  ....	-v 查看详细信息
+
+	推送分支  git push origin master/dev/.... 
+	origin 远程仓库默认名称。
+	master/dev/... 是你要推送的分支
+	master，dev基本时刻与远程同步
+	bug，feature分支等是否push 取决于自己
+
+	抓取分支
+	git clone git@github.com:$username/$reponame.git
+	
+	
+
+
 
 
 
