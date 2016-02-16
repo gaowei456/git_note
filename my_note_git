@@ -125,5 +125,19 @@
 	git checkout dev 切回dev merge合并 git branch -d new_func
 	若各种原因放弃 切回dev git branch -D new_func删除
 
-19	
+19	多人协作
+	git remote 查看远程库信息  
+	  ....	-v 查看详细信息
+
+	推送分支  git push origin master/dev/.... 
+	origin 远程仓库默认名称。
+	master/dev/... 是你要推送的分支
+	master，dev基本时刻与远程同步
+	bug，feature分支等是否push 取决于自己
+
+	抓取分支
+	git clone git@github.com:$username/$reponame.git
+	
+
+
 
