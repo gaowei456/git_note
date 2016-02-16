@@ -71,7 +71,7 @@
 	HEAD --> master --> 提交
 
 	git checkout -b dev 创建dev分支并切换到dev
-	相当于 git branch dev	创建dev分支
+	相当于 git branch dev [head hash]  基于某个head的哈希值创建dev分支,如果不指定则是基于当前的head
 		   git checkout dev 切换dev分支
 
 	git branch			查看当前分支（该命令会列出所有分支，当前分支前面会有个*）
@@ -108,4 +108,15 @@
 	git merge --no-ff dev,	--no-ff 强制禁用Fast forward模式
 	同样的用 git log --graph查看
 
+17	Bug分支
+	当你还在dev分支上工作时，有bug要去解决
+	git stash 来保留你的工作现场
+	git stash list 查看全部保留的现场
+	git stash apply 恢复，但stash内容不删除，需要使用 git stash drop来删除
+	git stash pop 恢复的同时把stash的内容也删除了
 
+	修复bug的过程中
+	切换到bug的分支上，git branch issue-01 bug分支来解决bug，
+	解决后 commit提交，merge合并，最后删除issue-01
+
+18
