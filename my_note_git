@@ -1,3 +1,5 @@
+一  本地操作
+
 1	首先  创建一个目录 
 	mkdir learn_git
 	cd learngit
@@ -47,7 +49,7 @@
 
 
 
-
+二 远程库操作
 
 12	添加远程库
 	首先上GitHub注册
@@ -72,15 +74,6 @@
 	下步 git clone git@github.com:$username/$reponame.git
 	(注意最好在外面新建一个文件夹) 然后你会看到目录下有个readme.md
 	(默认使用SSH git:// 也可以使用https)
-
-
-
-
-
-
-
-
-
 
 14	创建与合并分支
 	每次提交  git会把它们串成一条时间线即分支。
@@ -116,7 +109,7 @@
 
 
 
-
+三 分支管理
 
 16	分支管理策略
 	在实际的开发中：
@@ -168,7 +161,7 @@
 
 
 
-
+四 标签
 
 20	创建标签
 	标签会默认打在当前分支
@@ -191,6 +184,7 @@
 
 
 
+五 git配置
 
 22	一些自定义的git
 	git config --global color.ui true  让git显示颜色
