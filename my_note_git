@@ -137,11 +137,17 @@
 
 	抓取分支
 	git clone git@github.com:$username/$reponame.git
-	
-	
+	*注意 从远程库克隆过来 重新开个文件夹  git clone ..... $reponame.git  $dirname
+
+	冲突处理
+	负责一个项目的同事 A ，B
+	A clone 过来 进行修改 --> commit --> push ,然后
+	B clone 过来 进行修改 --> commit --> push ,此时git会提醒冲突
+	B应该 git pull 拉下来 手动merge --> commit --> push.
+    *(手动merge参照之前 )
 
 
 
 
 
-	it is  a test ....
+		
