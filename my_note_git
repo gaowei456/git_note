@@ -156,6 +156,15 @@
 	可用 -a 指定标签名 -m 指定文字说明
     比如 git tag -a v0.1 -m "文字说明"
 
+21	操作标签
+	git tag -d $tagname 删除标签
+	git push origin $tagname 推送到远程库
+					  --tags 一次性全部推送
+	删除已经推送的标签
+	git tag -d $tagname 先删除本地标签
+	git push origin :refs/tags/$tagname 就删除远程了
+
+
 
 
 
