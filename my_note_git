@@ -146,6 +146,16 @@
 	B应该 git pull 拉下来 手动merge --> commit --> push.
     *(手动merge参照之前 )
 
+20	创建标签
+	标签会默认打在当前分支
+	先git checkout 到要打的分支上
+	git tag $name  如v1.0...
+	git tag $name $commitID 如git tag v1.2 6224937 可以根据commitID查找
+    git tag 查看所有标签
+	git show $tagname 查看标签信息
+	可用 -a 指定标签名 -m 指定文字说明
+    比如 git tag -a v0.1 -m "文字说明"
+
 
 
 
