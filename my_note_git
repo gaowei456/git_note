@@ -119,4 +119,11 @@
 	切换到bug的分支上，git branch issue-01 bug分支来解决bug，
 	解决后 commit提交，merge合并，最后删除issue-01
 
-18
+18  Feature分支（添加新功能）
+	接到一个新功能，git checkout -b new_func
+	开始开发。。。。。。开发结束
+	git checkout dev 切回dev merge合并 git branch -d new_func
+	若各种原因放弃 切回dev git branch -D new_func删除
+
+19	
+
