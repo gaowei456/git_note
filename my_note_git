@@ -10,7 +10,7 @@
 
 4	git status 查看仓库的当前状态
 
-5	git diff 查看different
+5	git diff 查看修改后有哪些不用
 
 6	git log  查看最近到最远的提交日志
 	git reflog  列表显示   
@@ -42,6 +42,13 @@
 	直接 rm .../ git rm ..
 	出现误删 git checkout -- file(test.txt)
 
+
+
+
+
+
+
+
 12	添加远程库
 	首先上GitHub注册
 	创建SSH Key   ssh-keygen -t rsa -C "gaowei121314@gmail.com"(注册的邮箱地址)
@@ -65,6 +72,15 @@
 	下步 git clone git@github.com:$username/$reponame.git
 	(注意最好在外面新建一个文件夹) 然后你会看到目录下有个readme.md
 	(默认使用SSH git:// 也可以使用https)
+
+
+
+
+
+
+
+
+
 
 14	创建与合并分支
 	每次提交  git会把它们串成一条时间线即分支。
@@ -97,6 +113,10 @@
 	这时把 冲突项 修改解决，该语句修改，其余删除。
 	..................（冲突解决） add commit 提交。
 	git log --graph 来查看分支合并图
+
+
+
+
 
 16	分支管理策略
 	在实际的开发中：
@@ -146,6 +166,10 @@
 	B应该 git pull 拉下来 手动merge --> commit --> push.
     *(手动merge参照之前 )
 
+
+
+
+
 20	创建标签
 	标签会默认打在当前分支
 	先git checkout 到要打的分支上
@@ -165,6 +189,15 @@
 	git push origin :refs/tags/$tagname 就删除远程了
 
 
+
+
+
+22	一些自定义的git
+	git config --global color.ui true  让git显示颜色
+
+	在git工作区的根目录下创建一个.gitignore文件，进行配置
+
+	自己配置别名 git config --global alias.你自定义的命令 "默认的命令"
 
 
 
