@@ -95,4 +95,14 @@
 	..................（冲突解决） add commit 提交。
 	git log --graph 来查看分支合并图
 
+16	分支管理策略
+	在实际的开发中：
+	master分支	应该是十分稳定，仅用来发布新版本，不能平时在上面干活
+	dev分支     干活都在dev分支，比如dev发布1.0版本后在合并到master分支
+	而我们每个人的分支就时不时的往dev分支上合并。
+
+	通常合并分支时 git会用Fast forward模式，这种模式删除分之后会丢掉分支信息
+	git merge --no-ff dev,	--no-ff 强制禁用Fast forward模式
+	同样的用 git log --graph查看
+
 
